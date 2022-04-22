@@ -12,7 +12,7 @@ class PetstorePetHelper:
         return req
 
     def post_pet(self, petId, petName):
-        path = '/pet/'
+        path = '/pet'
         headers = {"Content-Type": "application/json"}
         body = {
                   "id": petId,
