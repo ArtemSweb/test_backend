@@ -8,7 +8,8 @@ class Application:
     hostPetstore = "https://petstore.swagger.io/v2"
 
     def __init__(self):
+        self.get_datas = datasHelper(self)
+
         self.petstore_pet = PetstorePetHelper(self)
         self.petstore_store = PetstoreStoreHelper(self)
         self.petstore_user = PetstoreUserHelper(self)
-        self.get_datas = datasHelper(self)

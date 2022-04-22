@@ -27,7 +27,7 @@ class datasHelper:
         return petName
 
     def get_email(self):
-        listfirst = ['',]
+        listfirst = ['fatality', 'nagibator', 'strangebee', 'zoom']
         listsecond = ('yandex', 'gmail', 'inbox', 'rambler')
         listdomain = ('ru', 'com', 'net', 'su')
         first = random.choice(listfirst)
