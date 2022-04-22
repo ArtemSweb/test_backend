@@ -2,12 +2,11 @@ import random
 
 def test_createUser(app):
     """Тест на создание нового пользователя"""
-    userId = random.randint(100, 200)
-    userName = random.choice(['Strange', 'PetLove', 'LovePet', 'lOvEpEt', 'LooooovePet'])
-    listName = ['Артем', 'Дмитрий', 'Кирилл', 'Максим', 'Илья', 'Станислав', 'Денис', 'Владимир', 'Евгений', 'Александр']
-    firstName = random.choice(listName)
-    lastName = 'Ланцов'
-    email = 'test@user.pet'
+    userId = app.get_datas.get_someId(99, 121)
+    userName = app.get_datas.get_userName()
+    firstName = app.get_datas.get_firstName()
+    lastName = app.get_datas.get_secondName()
+    email = app.get_datas.get_email()
     password = 'password'
     phone = '+79113332211'
     req = app.petstore_user.post_user(userId, userName, firstName, lastName, email, password, phone)
