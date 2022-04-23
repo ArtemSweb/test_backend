@@ -27,7 +27,7 @@ class datasHelper:
         return petName
 
     def get_email(self):
-        listfirst = ['fatality', 'nagibator', 'strangebee', 'zoom']
+        listfirst = ('fatality', 'nagibator', 'strangebee', 'zoom')
         listsecond = ('yandex', 'gmail', 'inbox', 'rambler')
         listdomain = ('ru', 'com', 'net', 'su')
         first = random.choice(listfirst)
@@ -38,3 +38,9 @@ class datasHelper:
     def get_someId(self, start, end):
         someId = random.randint(start, end)
         return someId
+
+    def get_phoneNumber(self):
+        number = '+7'
+        for i in range(10):
+            number += str(random.randint(0,9))
+        return number
