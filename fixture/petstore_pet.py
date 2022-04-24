@@ -35,3 +35,11 @@ class PetstorePetHelper:
         req_body = json.dumps(body)
         req = requests.post(self.app.hostPetstore + path, data=req_body, headers=headers)
         return req
+
+    def post_petId(self, petId, petName, status):
+        path = f'/pet/{str(petId)}'
+        headers = {"Content-Type": "application/x-www-form-urlencoded"}
+        data = {'name': petName, 'status': status}
+        req = requests.post(self.app.hostPetstore + path, headers=headers, data=data)
+        return req
+

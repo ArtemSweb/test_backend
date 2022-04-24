@@ -1,4 +1,3 @@
-import random
 
 def test_getPetById(app):
     """Тест на получение информации о питомце по id"""
