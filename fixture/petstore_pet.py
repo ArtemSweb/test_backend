@@ -5,7 +5,7 @@ class PetstorePetHelper:
     def __init__(self, app):
         self.app = app
 
-    def get_pet_id(self, petId):
+    def get_petId(self, petId):
         path = '/pet/' + str(petId)
         headers = {"Content-Type": "application/json"}
         req = requests.get(self.app.hostPetstore + path, headers=headers)
