@@ -31,3 +31,9 @@ class PetstoreStoreHelper:
         req_body = json.dumps(body)
         req = requests.post(self.app.hostPetstore + path, data=req_body, headers=headers)
         return req
+
+    def delete_storeOrderById(self, orderId):
+        path = '/store/order/' + str(orderId)
+        headers = {"Content-Type": "application/json"}
+        req = requests.delete(self.app.hostPetstore + path, headers=headers)
+        return req
