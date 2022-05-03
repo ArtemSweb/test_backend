@@ -10,3 +10,9 @@ class PetstoreStoreHelper:
         headers = {"Content-Type": "application/json"}
         req = requests.get(self.app.hostPetstore + path, headers=headers)
         return req
+
+    def get_storeOrderById(self, orderId):
+        path = '/store/order/' + str(orderId)
+        headers = {"Content-Type": "application/json"}
+        req = requests.get(self.app.hostPetstore + path, headers=headers)
+        return req
